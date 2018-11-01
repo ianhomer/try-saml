@@ -14,7 +14,7 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>idp</module>
+    <module>sp</module>
   </modules>
 
   <build>

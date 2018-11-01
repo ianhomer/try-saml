@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/idp/idp.iml" filepath="$PROJECT_DIR$/idp/idp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sp/sp.iml" filepath="$PROJECT_DIR$/sp/sp.iml" />
       <module fileurl="file://$PROJECT_DIR$/try-saml.iml" filepath="$PROJECT_DIR$/try-saml.iml" />
     </modules>
   </component>

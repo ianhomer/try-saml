@@ -1,12 +1,13 @@
-# Release Procedure
+# Create keystore
 
-Build pipeline builds releases and deploys to package repository for tagged 
-releases. This can be triggered with :
+Create keystore
 
-    mvn release:prepare && mvn release:clean    
+    keytool -keystore sp/src/main/resources/keystore.jks -genkey -alias client
 
-# Check for dependency and plugin updates
+And add a key
 
-    mvn versions:display-dependency-updates
-    mvn versions:display-plugin-updates
-    
+    keytool -genkey -alias dojo -keyalg RSA -keypass password -storepass password -keystore sp/src/main/resources/keystore.jks
+
+List keystore
+
+     keytool -list -keystore sp/src/main/resources/keystore.jks

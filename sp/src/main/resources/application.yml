@@ -1,0 +1,12 @@
+idp:
+  appId: ${DOJO_SP_APP_ID}
+  entityId: ${DOJO_SP_ENTITY_ID}
+  postLogoutURL: /
+  metadataURL: ${DOJO_IDP_METADATA_URL}
+
+server:
+  port: 8443
+  ssl:
+    key-alias: dojo
+    key-store: classpath:keystore.jks
+    key-store-password: password

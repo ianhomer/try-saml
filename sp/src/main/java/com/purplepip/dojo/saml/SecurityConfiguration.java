@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Timer;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.velocity.app.VelocityEngine;
@@ -83,6 +84,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
+@Slf4j
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Value("${idp.entityId}")
   private String entityId;
@@ -353,8 +355,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     Timer backgroundTaskTimer = new Timer(true);
 
+    LOG.info("Creating idp metadata with {}", metadataURL);
     HTTPMetadataProvider httpMetadataProvider =
-        new HTTPMetadataProvider(backgroundTaskTimer, new HttpClient(), metadataURL.concat(appId));
+        new HTTPMetadataProvider(backgroundTaskTimer, new HttpClient(), metadataURL);
 
     httpMetadataProvider.setParserPool(parserPool());
 
