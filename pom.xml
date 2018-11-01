@@ -7,13 +7,14 @@
     <version>1.0.6</version>
   </parent>
 
+  <groupId>com.purplepip.dojo</groupId>
   <artifactId>try-saml</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>try-saml</name>
   <packaging>pom</packaging>
 
   <modules>
-    <module>my-core</module>
+    <module>idp</module>
   </modules>
 
   <build>
